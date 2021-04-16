@@ -10,10 +10,10 @@
 #pragma config CP = OFF // disable code protect
 
 // DEVCFG1
-#pragma config FNOSC = PRIPLL // use primary oscillator with pll
+#pragma config FNOSC = FRCPLL // use internal oscillator with pll
 #pragma config FSOSCEN = OFF // disable secondary oscillator
 #pragma config IESO = OFF // disable switching clocks
-#pragma config POSCMOD = HS // high speed crystal mode
+#pragma config POSCMOD = OFF // internal RC
 #pragma config OSCIOFNC = OFF // disable clock output
 #pragma config FPBDIV = DIV_1 // divide sysclk freq by 1 for peripheral bus clock
 #pragma config FCKSM = CSDCMD // disable clock switch and FSCM
@@ -51,13 +51,13 @@ int main() {
     // do your TRIS and LAT commands here
     TRISAbits.TRISA4 = 0; // Make A4 an output
     TRISBbits.TRISB4 = 1; //B4 is an input
-
-
+  
+    
 
     __builtin_enable_interrupts();
 
     while (1) {
-
+        
         if (PORTBbits.RB4 == 0){ // if B4 is low (push button was pushed)
             LATAbits.LATA4 = 1; // Turn A4 on
             _CP0_SET_COUNT(0); // reset count
@@ -79,7 +79,7 @@ int main() {
             while (_CP0_GET_COUNT() < 12000000){ //0.5 seconds
                 ;
              }
-
+            
         }
 
     }
