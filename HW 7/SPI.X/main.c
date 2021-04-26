@@ -44,9 +44,10 @@ int main(void){
     
     while(1){
         // write one byte over SPI1
-        
+       
         int i;
         for (i = 0; i<628; i++){
+             _CP0_SET_COUNT(0);
              // make 2Hz sin wave
             unsigned short v = 512*sin(i/100.0) + 512.0;
             unsigned short p = create_byte(0, v);
@@ -68,7 +69,7 @@ int main(void){
             spi_io(p1>>8);
             spi_io(p1);
             LATAbits.LATA3 = 1; // bring CS high
-            _CP0_SET_COUNT(0);
+            
             while(_CP0_GET_COUNT() < 48000000/(2*1256)){ // wait 1 seconds
                 ;
             }
