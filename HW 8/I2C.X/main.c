@@ -13,7 +13,7 @@
 #pragma config CP = OFF // disable code protect
 
 // DEVCFG1
-#pragma config FNOSC = PRIPLL // use primary oscillator with pll
+#pragma config FNOSC = FRCPLL // use primary oscillator with pll
 #pragma config FSOSCEN = OFF // disable secondary oscillator
 #pragma config IESO = OFF // disable switching clocks
 #pragma config POSCMOD = HS // high speed crystal mode
@@ -37,6 +37,7 @@
 
 void setPin(unsigned char address, unsigned char reg, unsigned char value);
 unsigned char readPin(unsigned char waddress, unsigned char reg,unsigned char raddress);
+void delay(float time);
 
 int main(void){
     __builtin_disable_interrupts();
@@ -63,7 +64,10 @@ int main(void){
     
     __builtin_enable_interrupts();
     while(1){
-        LATAINV = 0b10000; // Switch A4
+        //LATAINV = 0b10000; // Switch A4
+        LATAINV = 0b10000;
+        delay(0.05);
+        LATAbits.LATA4=1;
         delay(0.05);
         
         if (readPin(0b01000000, 0x19, 0b01000001) == 0){
