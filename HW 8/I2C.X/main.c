@@ -64,7 +64,6 @@ int main(void){
     
     __builtin_enable_interrupts();
     while(1){
-        //LATAINV = 0b10000; // Switch A4
         LATAINV = 0b10000;
         delay(0.05);
         
