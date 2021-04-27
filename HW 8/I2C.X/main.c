@@ -67,8 +67,6 @@ int main(void){
         //LATAINV = 0b10000; // Switch A4
         LATAINV = 0b10000;
         delay(0.05);
-        LATAbits.LATA4=1;
-        delay(0.05);
         
         if (readPin(0b01000000, 0x19, 0b01000001) == 0){
             setPin(0b01000000,0x0A,0b10000000); // setting GPA7 high
