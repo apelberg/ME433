@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="main.c"/>
+    <file index="1" name="i2c_master_noint.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="#"/>
+    <tok fileIndex="0" linenr="1" column="2" str="include"/>
+    <tok fileIndex="0" linenr="1" column="9" str="&lt;xc.h&gt;"/>
+    <tok fileIndex="0" linenr="1" column="26" str="// processor SFR definitions"/>
+    <tok fileIndex="0" linenr="2" column="1" str="#"/>
+    <tok fileIndex="0" linenr="2" column="2" str="include"/>
+    <tok fileIndex="0" linenr="2" column="9" str="&lt;sys/attribs.h&gt;"/>
+    <tok fileIndex="0" linenr="2" column="26" str="// __ISR macro"/>
+    <tok fileIndex="0" linenr="3" column="1" str="#"/>
+    <tok fileIndex="0" linenr="3" column="2" str="include"/>
+    <tok fileIndex="0" linenr="3" column="10" str="&quot;math.h&quot;"/>
+    <tok fileIndex="0" linenr="4" column="1" str="//#include &quot;i2c_master_noint.c&quot;"/>
+    <tok fileIndex="0" linenr="5" column="1" str="#"/>
+    <tok fileIndex="0" linenr="5" column="2" str="include"/>
+    <tok fileIndex="0" linenr="5" column="10" str="&quot;i2c_master_noint.h&quot;"/>
+    <tok fileIndex="0" linenr="7" column="1" str="// DEVCFG0"/>
+    <tok fileIndex="0" linenr="8" column="1" str="#"/>
+    <tok fileIndex="0" linenr="8" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="8" column="9" str="config"/>
+    <tok fileIndex="0" linenr="8" column="16" str="DEBUG"/>
+    <tok fileIndex="0" linenr="8" column="22" str="="/>
+    <tok fileIndex="0" linenr="8" column="24" str="OFF"/>
+    <tok fileIndex="0" linenr="8" column="28" str="// disable debugging"/>
+    <tok fileIndex="0" linenr="9" column="1" str="#"/>
+    <tok fileIndex="0" linenr="9" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="9" column="9" str="config"/>
+    <tok fileIndex="0" linenr="9" column="16" str="JTAGEN"/>
+    <tok fileIndex="0" linenr="9" column="23" str="="/>
+    <tok fileIndex="0" linenr="9" column="25" str="OFF"/>
+    <tok fileIndex="0" linenr="9" column="29" str="// disable jtag"/>
+    <tok fileIndex="0" linenr="10" column="1" str="#"/>
+    <tok fileIndex="0" linenr="10" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="10" column="9" str="config"/>
+    <tok fileIndex="0" linenr="10" column="16" str="ICESEL"/>
+    <tok fileIndex="0" linenr="10" column="23" str="="/>
+    <tok fileIndex="0" linenr="10" column="25" str="ICS_PGx1"/>
+    <tok fileIndex="0" linenr="10" column="34" str="// use PGED1 and PGEC1"/>
+    <tok fileIndex="0" linenr="11" column="1" str="#"/>
+    <tok fileIndex="0" linenr="11" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="11" column="9" str="config"/>
+    <tok fileIndex="0" linenr="11" column="16" str="PWP"/>
+    <tok fileIndex="0" linenr="11" column="20" str="="/>
+    <tok fileIndex="0" linenr="11" column="22" str="OFF"/>
+    <tok fileIndex="0" linenr="11" column="26" str="// disable flash write protect"/>
+    <tok fileIndex="0" linenr="12" column="1" str="#"/>
+    <tok fileIndex="0" linenr="12" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="12" column="9" str="config"/>
+    <tok fileIndex="0" linenr="12" column="16" str="BWP"/>
+    <tok fileIndex="0" linenr="12" column="20" str="="/>
+    <tok fileIndex="0" linenr="12" column="22" str="OFF"/>
+    <tok fileIndex="0" linenr="12" column="26" str="// disable boot write protect"/>
+    <tok fileIndex="0" linenr="13" column="1" str="#"/>
+    <tok fileIndex="0" linenr="13" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="13" column="9" str="config"/>
+    <tok fileIndex="0" linenr="13" column="16" str="CP"/>
+    <tok fileIndex="0" linenr="13" column="19" str="="/>
+    <tok fileIndex="0" linenr="13" column="21" str="OFF"/>
+    <tok fileIndex="0" linenr="13" column="25" str="// disable code protect"/>
+    <tok fileIndex="0" linenr="15" column="1" str="// DEVCFG1"/>
+    <tok fileIndex="0" linenr="16" column="1" str="#"/>
+    <tok fileIndex="0" linenr="16" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="16" column="9" str="config"/>
+    <tok fileIndex="0" linenr="16" column="16" str="FNOSC"/>
+    <tok fileIndex="0" linenr="16" column="22" str="="/>
+    <tok fileIndex="0" linenr="16" column="24" str="PRIPLL"/>
+    <tok fileIndex="0" linenr="16" column="31" str="// use primary oscillator with pll"/>
+    <tok fileIndex="0" linenr="17" column="1" str="#"/>
+    <tok fileIndex="0" linenr="17" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="17" column="9" str="config"/>
+    <tok fileIndex="0" linenr="17" column="16" str="FSOSCEN"/>
+    <tok fileIndex="0" linenr="17" column="24" str="="/>
+    <tok fileIndex="0" linenr="17" column="26" str="OFF"/>
+    <tok fileIndex="0" linenr="17" column="30" str="// disable secondary oscillator"/>
+    <tok fileIndex="0" linenr="18" column="1" str="#"/>
+    <tok fileIndex="0" linenr="18" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="18" column="9" str="config"/>
+    <tok fileIndex="0" linenr="18" column="16" str="IESO"/>
+    <tok fileIndex="0" linenr="18" column="21" str="="/>
+    <tok fileIndex="0" linenr="18" column="23" str="OFF"/>
+    <tok fileIndex="0" linenr="18" column="27" str="// disable switching clocks"/>
+    <tok fileIndex="0" linenr="19" column="1" str="#"/>
+    <tok fileIndex="0" linenr="19" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="19" column="9" str="config"/>
+    <tok fileIndex="0" linenr="19" column="16" str="POSCMOD"/>
+    <tok fileIndex="0" linenr="19" column="24" str="="/>
+    <tok fileIndex="0" linenr="19" column="26" str="HS"/>
+    <tok fileIndex="0" linenr="19" column="29" str="// high speed crystal mode"/>
+    <tok fileIndex="0" linenr="20" column="1" str="#"/>
+    <tok fileIndex="0" linenr="20" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="20" column="9" str="config"/>
+    <tok fileIndex="0" linenr="20" column="16" str="OSCIOFNC"/>
+    <tok fileIndex="0" linenr="20" column="25" str="="/>
+    <tok fileIndex="0" linenr="20" column="27" str="OFF"/>
+    <tok fileIndex="0" linenr="20" column="31" str="// disable clock output"/>
+    <tok fileIndex="0" linenr="21" column="1" str="#"/>
+    <tok fileIndex="0" linenr="21" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="21" column="9" str="config"/>
+    <tok fileIndex="0" linenr="21" column="16" str="FPBDIV"/>
+    <tok fileIndex="0" linenr="21" column="23" str="="/>
+    <tok fileIndex="0" linenr="21" column="25" str="DIV_1"/>
+    <tok fileIndex="0" linenr="21" column="31" str="// divide sysclk freq by 1 for peripheral bus clock"/>
+    <tok fileIndex="0" linenr="22" column="1" str="#"/>
+    <tok fileIndex="0" linenr="22" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="22" column="9" str="config"/>
+    <tok fileIndex="0" linenr="22" column="16" str="FCKSM"/>
+    <tok fileIndex="0" linenr="22" column="22" str="="/>
+    <tok fileIndex="0" linenr="22" column="24" str="CSDCMD"/>
+    <tok fileIndex="0" linenr="22" column="31" str="// disable clock switch and FSCM"/>
+    <tok fileIndex="0" linenr="23" column="1" str="#"/>
+    <tok fileIndex="0" linenr="23" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="23" column="9" str="config"/>
+    <tok fileIndex="0" linenr="23" column="16" str="WDTPS"/>
+    <tok fileIndex="0" linenr="23" column="22" str="="/>
+    <tok fileIndex="0" linenr="23" column="24" str="PS1048576"/>
+    <tok fileIndex="0" linenr="23" column="34" str="// use largest wdt"/>
+    <tok fileIndex="0" linenr="24" column="1" str="#"/>
+    <tok fileIndex="0" linenr="24" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="24" column="9" str="config"/>
+    <tok fileIndex="0" linenr="24" column="16" str="WINDIS"/>
+    <tok fileIndex="0" linenr="24" column="23" str="="/>
+    <tok fileIndex="0" linenr="24" column="25" str="OFF"/>
+    <tok fileIndex="0" linenr="24" column="29" str="// use non-window mode wdt"/>
+    <tok fileIndex="0" linenr="25" column="1" str="#"/>
+    <tok fileIndex="0" linenr="25" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="25" column="9" str="config"/>
+    <tok fileIndex="0" linenr="25" column="16" str="FWDTEN"/>
+    <tok fileIndex="0" linenr="25" column="23" str="="/>
+    <tok fileIndex="0" linenr="25" column="25" str="OFF"/>
+    <tok fileIndex="0" linenr="25" column="29" str="// wdt disabled"/>
+    <tok fileIndex="0" linenr="26" column="1" str="#"/>
+    <tok fileIndex="0" linenr="26" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="26" column="9" str="config"/>
+    <tok fileIndex="0" linenr="26" column="16" str="FWDTWINSZ"/>
+    <tok fileIndex="0" linenr="26" column="26" str="="/>
+    <tok fileIndex="0" linenr="26" column="28" str="WINSZ_25"/>
+    <tok fileIndex="0" linenr="26" column="37" str="// wdt window at 25%"/>
+    <tok fileIndex="0" linenr="28" column="1" str="// DEVCFG2 - get the sysclk clock to 48MHz from the 8MHz crystal"/>
+    <tok fileIndex="0" linenr="29" column="1" str="#"/>
+    <tok fileIndex="0" linenr="29" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="29" column="9" str="config"/>
+    <tok fileIndex="0" linenr="29" column="16" str="FPLLIDIV"/>
+    <tok fileIndex="0" linenr="29" column="25" str="="/>
+    <tok fileIndex="0" linenr="29" column="27" str="DIV_2"/>
+    <tok fileIndex="0" linenr="29" column="33" str="// divide input clock to be in range 4-5MHz"/>
+    <tok fileIndex="0" linenr="30" column="1" str="#"/>
+    <tok fileIndex="0" linenr="30" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="30" column="9" str="config"/>
+    <tok fileIndex="0" linenr="30" column="16" str="FPLLMUL"/>
+    <tok fileIndex="0" linenr="30" column="24" str="="/>
+    <tok fileIndex="0" linenr="30" column="26" str="MUL_24"/>
+    <tok fileIndex="0" linenr="30" column="33" str="// multiply clock after FPLLIDIV"/>
+    <tok fileIndex="0" linenr="31" column="1" str="#"/>
+    <tok fileIndex="0" linenr="31" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="31" column="9" str="config"/>
+    <tok fileIndex="0" linenr="31" column="16" str="FPLLODIV"/>
+    <tok fileIndex="0" linenr="31" column="25" str="="/>
+    <tok fileIndex="0" linenr="31" column="27" str="DIV_2"/>
+    <tok fileIndex="0" linenr="31" column="33" str="// divide clock after FPLLMUL to get 48MHz"/>
+    <tok fileIndex="0" linenr="33" column="1" str="// DEVCFG3"/>
+    <tok fileIndex="0" linenr="34" column="1" str="#"/>
+    <tok fileIndex="0" linenr="34" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="34" column="9" str="config"/>
+    <tok fileIndex="0" linenr="34" column="16" str="USERID"/>
+    <tok fileIndex="0" linenr="34" column="23" str="="/>
+    <tok fileIndex="0" linenr="34" column="25" str="0"/>
+    <tok fileIndex="0" linenr="34" column="27" str="// some 16bit userid, doesn't matter what"/>
+    <tok fileIndex="0" linenr="35" column="1" str="#"/>
+    <tok fileIndex="0" linenr="35" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="35" column="9" str="config"/>
+    <tok fileIndex="0" linenr="35" column="16" str="PMDL1WAY"/>
+    <tok fileIndex="0" linenr="35" column="25" str="="/>
+    <tok fileIndex="0" linenr="35" column="27" str="OFF"/>
+    <tok fileIndex="0" linenr="35" column="31" str="// allow multiple reconfigurations"/>
+    <tok fileIndex="0" linenr="36" column="1" str="#"/>
+    <tok fileIndex="0" linenr="36" column="2" str="pragma"/>
+    <tok fileIndex="0" linenr="36" column="9" str="config"/>
+    <tok fileIndex="0" linenr="36" column="16" str="IOL1WAY"/>
+    <tok fileIndex="0" linenr="36" column="24" str="="/>
+    <tok fileIndex="0" linenr="36" column="26" str="OFF"/>
+    <tok fileIndex="0" linenr="36" column="30" str="// allow multiple reconfigurations"/>
+    <tok fileIndex="0" linenr="38" column="1" str="void"/>
+    <tok fileIndex="0" linenr="38" column="6" str="setPin"/>
+    <tok fileIndex="0" linenr="38" column="12" str="("/>
+    <tok fileIndex="0" linenr="38" column="13" str="unsigned"/>
+    <tok fileIndex="0" linenr="38" column="22" str="char"/>
+    <tok fileIndex="0" linenr="38" column="27" str="address"/>
+    <tok fileIndex="0" linenr="38" column="34" str=","/>
+    <tok fileIndex="0" linenr="38" column="36" str="unsigned"/>
+    <tok fileIndex="0" linenr="38" column="45" str="char"/>
+    <tok fileIndex="0" linenr="38" column="50" str="reg"/>
+    <tok fileIndex="0" linenr="38" column="53" str=","/>
+    <tok fileIndex="0" linenr="38" column="55" str="unsigned"/>
+    <tok fileIndex="0" linenr="38" column="64" str="char"/>
+    <tok fileIndex="0" linenr="38" column="69" str="value"/>
+    <tok fileIndex="0" linenr="38" column="74" str=")"/>
+    <tok fileIndex="0" linenr="38" column="75" str=";"/>
+    <tok fileIndex="0" linenr="39" column="1" str="unsigned"/>
+    <tok fileIndex="0" linenr="39" column="10" str="char"/>
+    <tok fileIndex="0" linenr="39" column="15" str="readPin"/>
+    <tok fileIndex="0" linenr="39" column="22" str="("/>
+    <tok fileIndex="0" linenr="39" column="23" str="unsigned"/>
+    <tok fileIndex="0" linenr="39" column="32" str="char"/>
+    <tok fileIndex="0" linenr="39" column="37" str="address"/>
+    <tok fileIndex="0" linenr="39" column="44" str=","/>
+    <tok fileIndex="0" linenr="39" column="46" str="unsigned"/>
+    <tok fileIndex="0" linenr="39" column="55" str="char"/>
+    <tok fileIndex="0" linenr="39" column="60" str="register"/>
+    <tok fileIndex="0" linenr="39" column="68" str=")"/>
+    <tok fileIndex="0" linenr="39" column="69" str=";"/>
+    <tok fileIndex="0" linenr="41" column="1" str="int"/>
+    <tok fileIndex="0" linenr="41" column="5" str="main"/>
+    <tok fileIndex="0" linenr="41" column="9" str="("/>
+    <tok fileIndex="0" linenr="41" column="10" str="void"/>
+    <tok fileIndex="0" linenr="41" column="14" str=")"/>
+    <tok fileIndex="0" linenr="41" column="15" str="{"/>
+    <tok fileIndex="0" linenr="42" column="5" str="__builtin_disable_interrupts"/>
+    <tok fileIndex="0" linenr="42" column="33" str="("/>
+    <tok fileIndex="0" linenr="42" column="34" str=")"/>
+    <tok fileIndex="0" linenr="42" column="35" str=";"/>
+    <tok fileIndex="0" linenr="43" column="5" str="// set the CP0 CONFIG register to indicate that kseg0 is cacheable (0x3)"/>
+    <tok fileIndex="0" linenr="44" column="5" str="__builtin_mtc0"/>
+    <tok fileIndex="0" linenr="44" column="19" str="("/>
+    <tok fileIndex="0" linenr="44" column="20" str="_CP0_CONFIG"/>
+    <tok fileIndex="0" linenr="44" column="31" str=","/>
+    <tok fileIndex="0" linenr="44" column="33" str="_CP0_CONFIG_SELECT"/>
+    <tok fileIndex="0" linenr="44" column="51" str=","/>
+    <tok fileIndex="0" linenr="44" column="53" str="0xa4210583"/>
+    <tok fileIndex="0" linenr="44" column="63" str=")"/>
+    <tok fileIndex="0" linenr="44" column="64" str=";"/>
+    <tok fileIndex="0" linenr="46" column="5" str="// 0 data RAM access wait states"/>
+    <tok fileIndex="0" linenr="47" column="5" str="BMXCONbits"/>
+    <tok fileIndex="0" linenr="47" column="15" str="."/>
+    <tok fileIndex="0" linenr="47" column="16" str="BMXWSDRM"/>
+    <tok fileIndex="0" linenr="47" column="25" str="="/>
+    <tok fileIndex="0" linenr="47" column="27" str="0x0"/>
+    <tok fileIndex="0" linenr="47" column="30" str=";"/>
+    <tok fileIndex="0" linenr="49" column="5" str="// enable multi vector interrupts"/>
+    <tok fileIndex="0" linenr="50" column="5" str="INTCONbits"/>
+    <tok fileIndex="0" linenr="50" column="15" str="."/>
+    <tok fileIndex="0" linenr="50" column="16" str="MVEC"/>
+    <tok fileIndex="0" linenr="50" column="21" str="="/>
+    <tok fileIndex="0" linenr="50" column="23" str="0x1"/>
+    <tok fileIndex="0" linenr="50" column="26" str=";"/>
+    <tok fileIndex="0" linenr="52" column="5" str="// disable JTAG to get pins back"/>
+    <tok fileIndex="0" linenr="53" column="5" str="DDPCONbits"/>
+    <tok fileIndex="0" linenr="53" column="15" str="."/>
+    <tok fileIndex="0" linenr="53" column="16" str="JTAGEN"/>
+    <tok fileIndex="0" linenr="53" column="23" str="="/>
+    <tok fileIndex="0" linenr="53" column="25" str="0"/>
+    <tok fileIndex="0" linenr="53" column="26" str=";"/>
+    <tok fileIndex="0" linenr="55" column="5" str="TRISAbits"/>
+    <tok fileIndex="0" linenr="55" column="14" str="."/>
+    <tok fileIndex="0" linenr="55" column="15" str="TRISA4"/>
+    <tok fileIndex="0" linenr="55" column="22" str="="/>
+    <tok fileIndex="0" linenr="55" column="24" str="0"/>
+    <tok fileIndex="0" linenr="55" column="25" str=";"/>
+    <tok fileIndex="0" linenr="56" column="5" str="LATAbits"/>
+    <tok fileIndex="0" linenr="56" column="13" str="."/>
+    <tok fileIndex="0" linenr="56" column="14" str="LATA4"/>
+    <tok fileIndex="0" linenr="56" column="20" str="="/>
+    <tok fileIndex="0" linenr="56" column="22" str="1"/>
+    <tok fileIndex="0" linenr="56" column="23" str=";"/>
+    <tok fileIndex="0" linenr="58" column="5" str="i2c_master_setup"/>
+    <tok fileIndex="0" linenr="58" column="21" str="("/>
+    <tok fileIndex="0" linenr="58" column="22" str=")"/>
+    <tok fileIndex="0" linenr="58" column="23" str=";"/>
+    <tok fileIndex="0" linenr="60" column="5" str="setPin"/>
+    <tok fileIndex="0" linenr="60" column="11" str="("/>
+    <tok fileIndex="0" linenr="60" column="12" str="0b01000000"/>
+    <tok fileIndex="0" linenr="60" column="22" str=","/>
+    <tok fileIndex="0" linenr="60" column="24" str="0x00"/>
+    <tok fileIndex="0" linenr="60" column="28" str=","/>
+    <tok fileIndex="0" linenr="60" column="30" str="0x00"/>
+    <tok fileIndex="0" linenr="60" column="34" str=")"/>
+    <tok fileIndex="0" linenr="60" column="35" str=";"/>
+    <tok fileIndex="0" linenr="60" column="37" str="// set IODIRA output"/>
+    <tok fileIndex="0" linenr="61" column="5" str="setPin"/>
+    <tok fileIndex="0" linenr="61" column="11" str="("/>
+    <tok fileIndex="0" linenr="61" column="12" str="0b01000000"/>
+    <tok fileIndex="0" linenr="61" column="22" str=","/>
+    <tok fileIndex="0" linenr="61" column="24" str="0x01"/>
+    <tok fileIndex="0" linenr="61" column="28" str=","/>
+    <tok fileIndex="0" linenr="61" column="30" str="0xFF"/>
+    <tok fileIndex="0" linenr="61" column="34" str=")"/>
+    <tok fileIndex="0" linenr="61" column="35" str=";"/>
+    <tok fileIndex="0" linenr="61" column="37" str="// set IODIRB input"/>
+    <tok fileIndex="0" linenr="64" column="5" str="__builtin_enable_interrupts"/>
+    <tok fileIndex="0" linenr="64" column="32" str="("/>
+    <tok fileIndex="0" linenr="64" column="33" str=")"/>
+    <tok fileIndex="0" linenr="64" column="34" str=";"/>
+    <tok fileIndex="0" linenr="65" column="5" str="while"/>
+    <tok fileIndex="0" linenr="65" column="10" str="("/>
+    <tok fileIndex="0" linenr="65" column="11" str="1"/>
+    <tok fileIndex="0" linenr="65" column="12" str=")"/>
+    <tok fileIndex="0" linenr="65" column="13" str="{"/>
+    <tok fileIndex="0" linenr="66" column="9" str="LATAINV"/>
+    <tok fileIndex="0" linenr="66" column="17" str="="/>
+    <tok fileIndex="0" linenr="66" column="19" str="0b10000"/>
+    <tok fileIndex="0" linenr="66" column="26" str=";"/>
+    <tok fileIndex="0" linenr="66" column="28" str="// Switch A4"/>
+    <tok fileIndex="0" linenr="67" column="9" str="_CP0_SET_COUNT"/>
+    <tok fileIndex="0" linenr="67" column="23" str="("/>
+    <tok fileIndex="0" linenr="67" column="24" str="0"/>
+    <tok fileIndex="0" linenr="67" column="25" str=")"/>
+    <tok fileIndex="0" linenr="67" column="26" str=";"/>
+    <tok fileIndex="0" linenr="67" column="28" str="// reset count"/>
+    <tok fileIndex="0" linenr="68" column="9" str="while"/>
+    <tok fileIndex="0" linenr="68" column="15" str="("/>
+    <tok fileIndex="0" linenr="68" column="16" str="_CP0_GET_COUNT"/>
+    <tok fileIndex="0" linenr="68" column="30" str="("/>
+    <tok fileIndex="0" linenr="68" column="31" str=")"/>
+    <tok fileIndex="0" linenr="68" column="33" str="&lt;"/>
+    <tok fileIndex="0" linenr="68" column="35" str="12000000"/>
+    <tok fileIndex="0" linenr="68" column="43" str=")"/>
+    <tok fileIndex="0" linenr="68" column="44" str="{"/>
+    <tok fileIndex="0" linenr="68" column="46" str="//0.5 seconds (48MHz/2/2)"/>
+    <tok fileIndex="0" linenr="69" column="13" str=";"/>
+    <tok fileIndex="0" linenr="70" column="9" str="}"/>
+    <tok fileIndex="0" linenr="72" column="9" str="setPin"/>
+    <tok fileIndex="0" linenr="72" column="15" str="("/>
+    <tok fileIndex="0" linenr="72" column="16" str="0b01000000"/>
+    <tok fileIndex="0" linenr="72" column="26" str=","/>
+    <tok fileIndex="0" linenr="72" column="27" str="0x0A"/>
+    <tok fileIndex="0" linenr="72" column="31" str=","/>
+    <tok fileIndex="0" linenr="72" column="32" str="0b10000000"/>
+    <tok fileIndex="0" linenr="72" column="42" str=")"/>
+    <tok fileIndex="0" linenr="72" column="43" str=";"/>
+    <tok fileIndex="0" linenr="72" column="45" str="// setting GPA7 high"/>
+    <tok fileIndex="0" linenr="75" column="5" str="}"/>
+    <tok fileIndex="0" linenr="76" column="1" str="}"/>
+    <tok fileIndex="0" linenr="78" column="1" str="void"/>
+    <tok fileIndex="0" linenr="78" column="6" str="setPin"/>
+    <tok fileIndex="0" linenr="78" column="12" str="("/>
+    <tok fileIndex="0" linenr="78" column="13" str="unsigned"/>
+    <tok fileIndex="0" linenr="78" column="22" str="char"/>
+    <tok fileIndex="0" linenr="78" column="27" str="address"/>
+    <tok fileIndex="0" linenr="78" column="34" str=","/>
+    <tok fileIndex="0" linenr="78" column="36" str="unsigned"/>
+    <tok fileIndex="0" linenr="78" column="45" str="char"/>
+    <tok fileIndex="0" linenr="78" column="50" str="reg"/>
+    <tok fileIndex="0" linenr="78" column="53" str=","/>
+    <tok fileIndex="0" linenr="78" column="55" str="unsigned"/>
+    <tok fileIndex="0" linenr="78" column="64" str="char"/>
+    <tok fileIndex="0" linenr="78" column="69" str="value"/>
+    <tok fileIndex="0" linenr="78" column="74" str=")"/>
+    <tok fileIndex="0" linenr="78" column="75" str="{"/>
+    <tok fileIndex="0" linenr="79" column="6" str="i2c_master_start"/>
+    <tok fileIndex="0" linenr="79" column="22" str="("/>
+    <tok fileIndex="0" linenr="79" column="23" str=")"/>
+    <tok fileIndex="0" linenr="79" column="24" str=";"/>
+    <tok fileIndex="0" linenr="79" column="26" str="// send start bit"/>
+    <tok fileIndex="0" linenr="80" column="6" str="i2c_master_send"/>
+    <tok fileIndex="0" linenr="80" column="21" str="("/>
+    <tok fileIndex="0" linenr="80" column="22" str="address"/>
+    <tok fileIndex="0" linenr="80" column="29" str=")"/>
+    <tok fileIndex="0" linenr="80" column="30" str=";"/>
+    <tok fileIndex="0" linenr="80" column="32" str="// send write address"/>
+    <tok fileIndex="0" linenr="81" column="6" str="i2c_master_send"/>
+    <tok fileIndex="0" linenr="81" column="21" str="("/>
+    <tok fileIndex="0" linenr="81" column="22" str="reg"/>
+    <tok fileIndex="0" linenr="81" column="25" str=")"/>
+    <tok fileIndex="0" linenr="81" column="26" str=";"/>
+    <tok fileIndex="0" linenr="81" column="28" str="// send register"/>
+    <tok fileIndex="0" linenr="82" column="6" str="i2c_master_send"/>
+    <tok fileIndex="0" linenr="82" column="21" str="("/>
+    <tok fileIndex="0" linenr="82" column="22" str="value"/>
+    <tok fileIndex="0" linenr="82" column="27" str=")"/>
+    <tok fileIndex="0" linenr="82" column="28" str=";"/>
+    <tok fileIndex="0" linenr="82" column="30" str="// send value"/>
+    <tok fileIndex="0" linenr="83" column="6" str="i2c_master_stop"/>
+    <tok fileIndex="0" linenr="83" column="21" str="("/>
+    <tok fileIndex="0" linenr="83" column="22" str=")"/>
+    <tok fileIndex="0" linenr="83" column="23" str=";"/>
+    <tok fileIndex="0" linenr="83" column="25" str="// send stop bit"/>
+    <tok fileIndex="0" linenr="84" column="1" str="}"/>
+    <tok fileIndex="0" linenr="86" column="1" str="unsigned"/>
+    <tok fileIndex="0" linenr="86" column="10" str="char"/>
+    <tok fileIndex="0" linenr="86" column="15" str="readPin"/>
+    <tok fileIndex="0" linenr="86" column="22" str="("/>
+    <tok fileIndex="0" linenr="86" column="23" str="unsigned"/>
+    <tok fileIndex="0" linenr="86" column="32" str="char"/>
+    <tok fileIndex="0" linenr="86" column="37" str="address"/>
+    <tok fileIndex="0" linenr="86" column="44" str=","/>
+    <tok fileIndex="0" linenr="86" column="46" str="unsigned"/>
+    <tok fileIndex="0" linenr="86" column="55" str="char"/>
+    <tok fileIndex="0" linenr="86" column="60" str="register"/>
+    <tok fileIndex="0" linenr="86" column="68" str=")"/>
+    <tok fileIndex="0" linenr="86" column="69" str="{"/>
+    <tok fileIndex="0" linenr="88" column="1" str="}"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="main.c" linenr="1" str="#include&lt;xc.h&gt;"/>
+    <directive file="main.c" linenr="2" str="#include&lt;sys/attribs.h&gt;"/>
+    <directive file="main.c" linenr="3" str="#include &quot;math.h&quot;"/>
+    <directive file="main.c" linenr="5" str="#include &quot;i2c_master_noint.h&quot;"/>
+    <directive file="main.c" linenr="8" str="#pragma config DEBUG = OFF"/>
+    <directive file="main.c" linenr="9" str="#pragma config JTAGEN = OFF"/>
+    <directive file="main.c" linenr="10" str="#pragma config ICESEL = ICS_PGx1"/>
+    <directive file="main.c" linenr="11" str="#pragma config PWP = OFF"/>
+    <directive file="main.c" linenr="12" str="#pragma config BWP = OFF"/>
+    <directive file="main.c" linenr="13" str="#pragma config CP = OFF"/>
+    <directive file="main.c" linenr="16" str="#pragma config FNOSC = PRIPLL"/>
+    <directive file="main.c" linenr="17" str="#pragma config FSOSCEN = OFF"/>
+    <directive file="main.c" linenr="18" str="#pragma config IESO = OFF"/>
+    <directive file="main.c" linenr="19" str="#pragma config POSCMOD = HS"/>
+    <directive file="main.c" linenr="20" str="#pragma config OSCIOFNC = OFF"/>
+    <directive file="main.c" linenr="21" str="#pragma config FPBDIV = DIV_1"/>
+    <directive file="main.c" linenr="22" str="#pragma config FCKSM = CSDCMD"/>
+    <directive file="main.c" linenr="23" str="#pragma config WDTPS = PS1048576"/>
+    <directive file="main.c" linenr="24" str="#pragma config WINDIS = OFF"/>
+    <directive file="main.c" linenr="25" str="#pragma config FWDTEN = OFF"/>
+    <directive file="main.c" linenr="26" str="#pragma config FWDTWINSZ = WINSZ_25"/>
+    <directive file="main.c" linenr="29" str="#pragma config FPLLIDIV = DIV_2"/>
+    <directive file="main.c" linenr="30" str="#pragma config FPLLMUL = MUL_24"/>
+    <directive file="main.c" linenr="31" str="#pragma config FPLLODIV = DIV_2"/>
+    <directive file="main.c" linenr="34" str="#pragma config USERID = 0"/>
+    <directive file="main.c" linenr="35" str="#pragma config PMDL1WAY = OFF"/>
+    <directive file="main.c" linenr="36" str="#pragma config IOL1WAY = OFF"/>
+    <directive file="i2c_master_noint.h" linenr="1" str="#ifndef I2C_MASTER_NOINT_H__"/>
+    <directive file="i2c_master_noint.h" linenr="2" str="#define I2C_MASTER_NOINT_H__"/>
+    <directive file="i2c_master_noint.h" linenr="6" str="#include &lt;xc.h&gt;"/>
+    <directive file="i2c_master_noint.h" linenr="16" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="0x7fa5aec04f90" file="i2c_master_noint.h" linenr="8" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec05170" file="i2c_master_noint.h" linenr="8" column="6" str="i2c_master_setup" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91b740" astParent="0x7fa5aec04d50"/>
+    <token id="0x7fa5aec04d50" file="i2c_master_noint.h" linenr="8" column="22" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0a840" astOperand1="0x7fa5aec05170" valueType-type="void"/>
+    <token id="0x7fa5aec0a840" file="i2c_master_noint.h" linenr="8" column="27" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec04d50"/>
+    <token id="0x7fa5aec0a890" file="i2c_master_noint.h" linenr="8" column="28" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0a8e0" file="i2c_master_noint.h" linenr="9" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0a930" file="i2c_master_noint.h" linenr="9" column="6" str="i2c_master_start" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91b7e0" astParent="0x7fa5aec0a980"/>
+    <token id="0x7fa5aec0a980" file="i2c_master_noint.h" linenr="9" column="22" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0aa20" astOperand1="0x7fa5aec0a930" valueType-type="void"/>
+    <token id="0x7fa5aec0aa20" file="i2c_master_noint.h" linenr="9" column="27" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0a980"/>
+    <token id="0x7fa5aec0aa70" file="i2c_master_noint.h" linenr="9" column="28" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0ab40" file="i2c_master_noint.h" linenr="10" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0ab90" file="i2c_master_noint.h" linenr="10" column="6" str="i2c_master_restart" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91b880" astParent="0x7fa5aec0abe0"/>
+    <token id="0x7fa5aec0abe0" file="i2c_master_noint.h" linenr="10" column="24" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0ac80" astOperand1="0x7fa5aec0ab90" valueType-type="void"/>
+    <token id="0x7fa5aec0ac80" file="i2c_master_noint.h" linenr="10" column="29" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0abe0"/>
+    <token id="0x7fa5aec0acd0" file="i2c_master_noint.h" linenr="10" column="30" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0ad20" file="i2c_master_noint.h" linenr="11" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0ad70" file="i2c_master_noint.h" linenr="11" column="6" str="i2c_master_send" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91b920" astParent="0x7fa5aec0ae40"/>
+    <token id="0x7fa5aec0ae40" file="i2c_master_noint.h" linenr="11" column="21" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0af80" astOperand1="0x7fa5aec0ad70" astOperand2="0x7fa5aec0af30" valueType-type="void"/>
+    <token id="0x7fa5aec0ae90" file="i2c_master_noint.h" linenr="11" column="31" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0af30" file="i2c_master_noint.h" linenr="11" column="36" str="byte" scope="0x7fa5ae91b610" type="name" varId="1" variable="0x7fa5ac52cf40" astParent="0x7fa5aec0ae40" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0af80" file="i2c_master_noint.h" linenr="11" column="40" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0ae40"/>
+    <token id="0x7fa5aec0afd0" file="i2c_master_noint.h" linenr="11" column="41" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0b020" file="i2c_master_noint.h" linenr="12" column="10" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0b140" file="i2c_master_noint.h" linenr="12" column="15" str="i2c_master_recv" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91ba00" astParent="0x7fa5aec0b190"/>
+    <token id="0x7fa5aec0b190" file="i2c_master_noint.h" linenr="12" column="30" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0b230" astOperand1="0x7fa5aec0b140" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0b230" file="i2c_master_noint.h" linenr="12" column="35" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0b190"/>
+    <token id="0x7fa5aec0b280" file="i2c_master_noint.h" linenr="12" column="36" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0b2d0" file="i2c_master_noint.h" linenr="13" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0b320" file="i2c_master_noint.h" linenr="13" column="6" str="i2c_master_ack" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91bae0" astParent="0x7fa5aec0b3f0"/>
+    <token id="0x7fa5aec0b3f0" file="i2c_master_noint.h" linenr="13" column="20" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0b4e0" astOperand1="0x7fa5aec0b320" astOperand2="0x7fa5aec0b490" valueType-type="void"/>
+    <token id="0x7fa5aec0b440" file="i2c_master_noint.h" linenr="13" column="21" str="int" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0b490" file="i2c_master_noint.h" linenr="13" column="25" str="val" scope="0x7fa5ae91b610" type="name" varId="2" variable="0x7fa5ac5206a0" astParent="0x7fa5aec0b3f0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0b4e0" file="i2c_master_noint.h" linenr="13" column="28" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0b3f0"/>
+    <token id="0x7fa5aec0b530" file="i2c_master_noint.h" linenr="13" column="29" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0b580" file="i2c_master_noint.h" linenr="14" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0b5d0" file="i2c_master_noint.h" linenr="14" column="6" str="i2c_master_stop" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91bbc0" astParent="0x7fa5aec0b620"/>
+    <token id="0x7fa5aec0b620" file="i2c_master_noint.h" linenr="14" column="21" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0b740" astOperand1="0x7fa5aec0b5d0" valueType-type="void"/>
+    <token id="0x7fa5aec0b740" file="i2c_master_noint.h" linenr="14" column="26" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0b620"/>
+    <token id="0x7fa5aec0b790" file="i2c_master_noint.h" linenr="14" column="27" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0b7e0" file="main.c" linenr="38" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0b830" file="main.c" linenr="38" column="6" str="setPin" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91bca0" astParent="0x7fa5aec0b880"/>
+    <token id="0x7fa5aec0b880" file="main.c" linenr="38" column="12" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0bd40" astOperand1="0x7fa5aec0b830" astOperand2="0x7fa5aec0bb80" valueType-type="void"/>
+    <token id="0x7fa5aec0b8d0" file="main.c" linenr="38" column="22" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0b9f0" file="main.c" linenr="38" column="27" str="address" scope="0x7fa5ae91b610" type="name" varId="3" astParent="0x7fa5aec0ba40"/>
+    <token id="0x7fa5aec0ba40" file="main.c" linenr="38" column="34" str="," scope="0x7fa5ae91b610" astParent="0x7fa5aec0bb80" astOperand1="0x7fa5aec0b9f0" astOperand2="0x7fa5aec0bb30"/>
+    <token id="0x7fa5aec0ba90" file="main.c" linenr="38" column="45" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0bb30" file="main.c" linenr="38" column="50" str="reg" scope="0x7fa5ae91b610" type="name" varId="4" astParent="0x7fa5aec0ba40"/>
+    <token id="0x7fa5aec0bb80" file="main.c" linenr="38" column="53" str="," scope="0x7fa5ae91b610" astParent="0x7fa5aec0b880" astOperand1="0x7fa5aec0ba40" astOperand2="0x7fa5aec0bcf0"/>
+    <token id="0x7fa5aec0bbd0" file="main.c" linenr="38" column="64" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0bcf0" file="main.c" linenr="38" column="69" str="value" scope="0x7fa5ae91b610" type="name" varId="5" astParent="0x7fa5aec0bb80"/>
+    <token id="0x7fa5aec0bd40" file="main.c" linenr="38" column="74" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0b880"/>
+    <token id="0x7fa5aec0bd90" file="main.c" linenr="38" column="75" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0bde0" file="main.c" linenr="39" column="10" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0be80" file="main.c" linenr="39" column="15" str="readPin" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91bd80" astParent="0x7fa5aec0bed0"/>
+    <token id="0x7fa5aec0bed0" file="main.c" linenr="39" column="22" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0c180" astOperand1="0x7fa5aec0be80" astOperand2="0x7fa5aec0c090" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0bf20" file="main.c" linenr="39" column="32" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0c040" file="main.c" linenr="39" column="37" str="address" scope="0x7fa5ae91b610" type="name" varId="6" astParent="0x7fa5aec0c090"/>
+    <token id="0x7fa5aec0c090" file="main.c" linenr="39" column="44" str="," scope="0x7fa5ae91b610" astParent="0x7fa5aec0bed0" astOperand1="0x7fa5aec0c040" astOperand2="0x7fa5aec0c0e0"/>
+    <token id="0x7fa5aec0c0e0" file="main.c" linenr="39" column="55" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true" astParent="0x7fa5aec0c090"/>
+    <token id="0x7fa5aec0c180" file="main.c" linenr="39" column="68" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0bed0"/>
+    <token id="0x7fa5aec0c220" file="main.c" linenr="39" column="69" str=";" scope="0x7fa5ae91b610"/>
+    <token id="0x7fa5aec0c2f0" file="main.c" linenr="41" column="1" str="int" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0c340" file="main.c" linenr="41" column="5" str="main" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91be60" astParent="0x7fa5aec0c390"/>
+    <token id="0x7fa5aec0c390" file="main.c" linenr="41" column="9" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0c430" astOperand1="0x7fa5aec0c340" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0c430" file="main.c" linenr="41" column="14" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0c390"/>
+    <token id="0x7fa5aec0c480" file="main.c" linenr="41" column="15" str="{" scope="0x7fa5ae91bf40" link="0x7fa5aec0ec00"/>
+    <token id="0x7fa5aec0c4d0" file="main.c" linenr="42" column="5" str="__builtin_disable_interrupts" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0c520"/>
+    <token id="0x7fa5aec0c520" file="main.c" linenr="42" column="33" str="(" scope="0x7fa5ae91bf40" link="0x7fa5aec0c5f0" astOperand1="0x7fa5aec0c4d0"/>
+    <token id="0x7fa5aec0c5f0" file="main.c" linenr="42" column="34" str=")" scope="0x7fa5ae91bf40" link="0x7fa5aec0c520"/>
+    <token id="0x7fa5aec0c640" file="main.c" linenr="42" column="35" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0c690" file="main.c" linenr="44" column="5" str="__builtin_mtc0" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0c6e0"/>
+    <token id="0x7fa5aec0c6e0" file="main.c" linenr="44" column="19" str="(" scope="0x7fa5ae91bf40" link="0x7fa5aec0c940" astOperand1="0x7fa5aec0c690" astOperand2="0x7fa5aec0c820"/>
+    <token id="0x7fa5aec0c730" file="main.c" linenr="44" column="20" str="_CP0_CONFIG" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0c780"/>
+    <token id="0x7fa5aec0c780" file="main.c" linenr="44" column="31" str="," scope="0x7fa5ae91bf40" astParent="0x7fa5aec0c820" astOperand1="0x7fa5aec0c730" astOperand2="0x7fa5aec0c7d0"/>
+    <token id="0x7fa5aec0c7d0" file="main.c" linenr="44" column="33" str="_CP0_CONFIG_SELECT" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0c780"/>
+    <token id="0x7fa5aec0c820" file="main.c" linenr="44" column="51" str="," scope="0x7fa5ae91bf40" astParent="0x7fa5aec0c6e0" astOperand1="0x7fa5aec0c780" astOperand2="0x7fa5aec0c8f0"/>
+    <token id="0x7fa5aec0c8f0" file="main.c" linenr="44" column="53" str="0xa4210583" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91b4f0" astParent="0x7fa5aec0c820" valueType-type="int" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0c940" file="main.c" linenr="44" column="63" str=")" scope="0x7fa5ae91bf40" link="0x7fa5aec0c6e0"/>
+    <token id="0x7fa5aec0c990" file="main.c" linenr="44" column="64" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0c9e0" file="main.c" linenr="47" column="5" str="BMXCONbits" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0ca30"/>
+    <token id="0x7fa5aec0ca30" file="main.c" linenr="47" column="15" str="." scope="0x7fa5ae91bf40" astParent="0x7fa5aec0cad0" astOperand1="0x7fa5aec0c9e0" astOperand2="0x7fa5aec0ca80"/>
+    <token id="0x7fa5aec0ca80" file="main.c" linenr="47" column="16" str="BMXWSDRM" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0ca30"/>
+    <token id="0x7fa5aec0cad0" file="main.c" linenr="47" column="25" str="=" scope="0x7fa5ae91bf40" type="op" isAssignmentOp="True" astOperand1="0x7fa5aec0ca30" astOperand2="0x7fa5aec0cb20"/>
+    <token id="0x7fa5aec0cb20" file="main.c" linenr="47" column="27" str="0x0" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91b510" astParent="0x7fa5aec0cad0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0cbf0" file="main.c" linenr="47" column="30" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0cc40" file="main.c" linenr="50" column="5" str="INTCONbits" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0cc90"/>
+    <token id="0x7fa5aec0cc90" file="main.c" linenr="50" column="15" str="." scope="0x7fa5ae91bf40" astParent="0x7fa5aec0cd30" astOperand1="0x7fa5aec0cc40" astOperand2="0x7fa5aec0cce0"/>
+    <token id="0x7fa5aec0cce0" file="main.c" linenr="50" column="16" str="MVEC" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0cc90"/>
+    <token id="0x7fa5aec0cd30" file="main.c" linenr="50" column="21" str="=" scope="0x7fa5ae91bf40" type="op" isAssignmentOp="True" astOperand1="0x7fa5aec0cc90" astOperand2="0x7fa5aec0cd80"/>
+    <token id="0x7fa5aec0cd80" file="main.c" linenr="50" column="23" str="0x1" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d510" astParent="0x7fa5aec0cd30" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0cdd0" file="main.c" linenr="50" column="26" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0ce20" file="main.c" linenr="53" column="5" str="DDPCONbits" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0cef0"/>
+    <token id="0x7fa5aec0cef0" file="main.c" linenr="53" column="15" str="." scope="0x7fa5ae91bf40" astParent="0x7fa5aec0cf90" astOperand1="0x7fa5aec0ce20" astOperand2="0x7fa5aec0cf40"/>
+    <token id="0x7fa5aec0cf40" file="main.c" linenr="53" column="16" str="JTAGEN" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0cef0"/>
+    <token id="0x7fa5aec0cf90" file="main.c" linenr="53" column="23" str="=" scope="0x7fa5ae91bf40" type="op" isAssignmentOp="True" astOperand1="0x7fa5aec0cef0" astOperand2="0x7fa5aec0cfe0"/>
+    <token id="0x7fa5aec0cfe0" file="main.c" linenr="53" column="25" str="0" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d5c0" astParent="0x7fa5aec0cf90" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0d030" file="main.c" linenr="53" column="26" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0d080" file="main.c" linenr="55" column="5" str="TRISAbits" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0d0d0"/>
+    <token id="0x7fa5aec0d0d0" file="main.c" linenr="55" column="14" str="." scope="0x7fa5ae91bf40" astParent="0x7fa5aec0d1f0" astOperand1="0x7fa5aec0d080" astOperand2="0x7fa5aec0d120"/>
+    <token id="0x7fa5aec0d120" file="main.c" linenr="55" column="15" str="TRISA4" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0d0d0"/>
+    <token id="0x7fa5aec0d1f0" file="main.c" linenr="55" column="22" str="=" scope="0x7fa5ae91bf40" type="op" isAssignmentOp="True" astOperand1="0x7fa5aec0d0d0" astOperand2="0x7fa5aec0d240"/>
+    <token id="0x7fa5aec0d240" file="main.c" linenr="55" column="24" str="0" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d670" astParent="0x7fa5aec0d1f0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0d290" file="main.c" linenr="55" column="25" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0d2e0" file="main.c" linenr="56" column="5" str="LATAbits" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0d330"/>
+    <token id="0x7fa5aec0d330" file="main.c" linenr="56" column="13" str="." scope="0x7fa5ae91bf40" astParent="0x7fa5aec0d3d0" astOperand1="0x7fa5aec0d2e0" astOperand2="0x7fa5aec0d380"/>
+    <token id="0x7fa5aec0d380" file="main.c" linenr="56" column="14" str="LATA4" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0d330"/>
+    <token id="0x7fa5aec0d3d0" file="main.c" linenr="56" column="20" str="=" scope="0x7fa5ae91bf40" type="op" isAssignmentOp="True" astOperand1="0x7fa5aec0d330" astOperand2="0x7fa5aec0d420"/>
+    <token id="0x7fa5aec0d420" file="main.c" linenr="56" column="22" str="1" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d720" astParent="0x7fa5aec0d3d0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0d4f0" file="main.c" linenr="56" column="23" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0d540" file="main.c" linenr="58" column="5" str="i2c_master_setup" scope="0x7fa5ae91bf40" type="name" function="0x7fa5ae91b740" astParent="0x7fa5aec0d590"/>
+    <token id="0x7fa5aec0d590" file="main.c" linenr="58" column="21" str="(" scope="0x7fa5ae91bf40" link="0x7fa5aec0d5e0" astOperand1="0x7fa5aec0d540" valueType-type="void"/>
+    <token id="0x7fa5aec0d5e0" file="main.c" linenr="58" column="22" str=")" scope="0x7fa5ae91bf40" link="0x7fa5aec0d590"/>
+    <token id="0x7fa5aec0d630" file="main.c" linenr="58" column="23" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0d680" file="main.c" linenr="60" column="5" str="setPin" scope="0x7fa5ae91bf40" type="name" function="0x7fa5ae91bca0" astParent="0x7fa5aec0d6d0"/>
+    <token id="0x7fa5aec0d6d0" file="main.c" linenr="60" column="11" str="(" scope="0x7fa5ae91bf40" link="0x7fa5aec0d930" astOperand1="0x7fa5aec0d680" astOperand2="0x7fa5aec0d890" valueType-type="void"/>
+    <token id="0x7fa5aec0d720" file="main.c" linenr="60" column="12" str="0b01000000" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d7d0" astParent="0x7fa5aec0d7f0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0d7f0" file="main.c" linenr="60" column="22" str="," scope="0x7fa5ae91bf40" astParent="0x7fa5aec0d890" astOperand1="0x7fa5aec0d720" astOperand2="0x7fa5aec0d840"/>
+    <token id="0x7fa5aec0d840" file="main.c" linenr="60" column="24" str="0x00" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d880" astParent="0x7fa5aec0d7f0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0d890" file="main.c" linenr="60" column="28" str="," scope="0x7fa5ae91bf40" astParent="0x7fa5aec0d6d0" astOperand1="0x7fa5aec0d7f0" astOperand2="0x7fa5aec0d8e0"/>
+    <token id="0x7fa5aec0d8e0" file="main.c" linenr="60" column="30" str="0x00" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d930" astParent="0x7fa5aec0d890" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0d930" file="main.c" linenr="60" column="34" str=")" scope="0x7fa5ae91bf40" link="0x7fa5aec0d6d0"/>
+    <token id="0x7fa5aec0d980" file="main.c" linenr="60" column="35" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0d9d0" file="main.c" linenr="61" column="5" str="setPin" scope="0x7fa5ae91bf40" type="name" function="0x7fa5ae91bca0" astParent="0x7fa5aec0da20"/>
+    <token id="0x7fa5aec0da20" file="main.c" linenr="61" column="11" str="(" scope="0x7fa5ae91bf40" link="0x7fa5aec0dc80" astOperand1="0x7fa5aec0d9d0" astOperand2="0x7fa5aec0dbe0" valueType-type="void"/>
+    <token id="0x7fa5aec0daf0" file="main.c" linenr="61" column="12" str="0b01000000" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91d9e0" astParent="0x7fa5aec0db40" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0db40" file="main.c" linenr="61" column="22" str="," scope="0x7fa5ae91bf40" astParent="0x7fa5aec0dbe0" astOperand1="0x7fa5aec0daf0" astOperand2="0x7fa5aec0db90"/>
+    <token id="0x7fa5aec0db90" file="main.c" linenr="61" column="24" str="0x01" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91da90" astParent="0x7fa5aec0db40" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0dbe0" file="main.c" linenr="61" column="28" str="," scope="0x7fa5ae91bf40" astParent="0x7fa5aec0da20" astOperand1="0x7fa5aec0db40" astOperand2="0x7fa5aec0dc30"/>
+    <token id="0x7fa5aec0dc30" file="main.c" linenr="61" column="30" str="0xFF" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91db40" astParent="0x7fa5aec0dbe0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0dc80" file="main.c" linenr="61" column="34" str=")" scope="0x7fa5ae91bf40" link="0x7fa5aec0da20"/>
+    <token id="0x7fa5aec0dcd0" file="main.c" linenr="61" column="35" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0dd20" file="main.c" linenr="64" column="5" str="__builtin_enable_interrupts" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0ddf0"/>
+    <token id="0x7fa5aec0ddf0" file="main.c" linenr="64" column="32" str="(" scope="0x7fa5ae91bf40" link="0x7fa5aec097a0" astOperand1="0x7fa5aec0dd20"/>
+    <token id="0x7fa5aec097a0" file="main.c" linenr="64" column="33" str=")" scope="0x7fa5ae91bf40" link="0x7fa5aec0ddf0"/>
+    <token id="0x7fa5aec0dec0" file="main.c" linenr="64" column="34" str=";" scope="0x7fa5ae91bf40"/>
+    <token id="0x7fa5aec0df10" file="main.c" linenr="65" column="5" str="while" scope="0x7fa5ae91bf40" type="name" astParent="0x7fa5aec0df60"/>
+    <token id="0x7fa5aec0df60" file="main.c" linenr="65" column="10" str="(" scope="0x7fa5ae91bf40" link="0x7fa5aec0e000" astOperand1="0x7fa5aec0df10" astOperand2="0x7fa5aec0dfb0"/>
+    <token id="0x7fa5aec0dfb0" file="main.c" linenr="65" column="11" str="1" scope="0x7fa5ae91bf40" type="number" isInt="True" values="0x7fa5ae91dbf0" astParent="0x7fa5aec0df60" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0e000" file="main.c" linenr="65" column="12" str=")" scope="0x7fa5ae91bf40" link="0x7fa5aec0df60"/>
+    <token id="0x7fa5aec0e050" file="main.c" linenr="65" column="13" str="{" scope="0x7fa5ae91c070" link="0x7fa5aec0ebb0"/>
+    <token id="0x7fa5aec0e0a0" file="main.c" linenr="66" column="9" str="LATAINV" scope="0x7fa5ae91c070" type="name" astParent="0x7fa5aec0e170"/>
+    <token id="0x7fa5aec0e170" file="main.c" linenr="66" column="17" str="=" scope="0x7fa5ae91c070" type="op" isAssignmentOp="True" astOperand1="0x7fa5aec0e0a0" astOperand2="0x7fa5aec0e1c0"/>
+    <token id="0x7fa5aec0e1c0" file="main.c" linenr="66" column="19" str="0b10000" scope="0x7fa5ae91c070" type="number" isInt="True" values="0x7fa5ae91dca0" astParent="0x7fa5aec0e170" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0e210" file="main.c" linenr="66" column="26" str=";" scope="0x7fa5ae91c070"/>
+    <token id="0x7fa5aec0e260" file="main.c" linenr="67" column="9" str="_CP0_SET_COUNT" scope="0x7fa5ae91c070" type="name" astParent="0x7fa5aec0e2b0"/>
+    <token id="0x7fa5aec0e2b0" file="main.c" linenr="67" column="23" str="(" scope="0x7fa5ae91c070" link="0x7fa5aec0e350" astOperand1="0x7fa5aec0e260" astOperand2="0x7fa5aec0e300"/>
+    <token id="0x7fa5aec0e300" file="main.c" linenr="67" column="24" str="0" scope="0x7fa5ae91c070" type="number" isInt="True" values="0x7fa5ae80f330" astParent="0x7fa5aec0e2b0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0e350" file="main.c" linenr="67" column="25" str=")" scope="0x7fa5ae91c070" link="0x7fa5aec0e2b0"/>
+    <token id="0x7fa5aec0e3a0" file="main.c" linenr="67" column="26" str=";" scope="0x7fa5ae91c070"/>
+    <token id="0x7fa5aec0e470" file="main.c" linenr="68" column="9" str="while" scope="0x7fa5ae91c070" type="name" astParent="0x7fa5aec0e4c0"/>
+    <token id="0x7fa5aec0e4c0" file="main.c" linenr="68" column="15" str="(" scope="0x7fa5ae91c070" link="0x7fa5aec0e6a0" astOperand1="0x7fa5aec0e470" astOperand2="0x7fa5aec0e600"/>
+    <token id="0x7fa5aec0e510" file="main.c" linenr="68" column="16" str="_CP0_GET_COUNT" scope="0x7fa5ae91c070" type="name" astParent="0x7fa5aec0e560"/>
+    <token id="0x7fa5aec0e560" file="main.c" linenr="68" column="30" str="(" scope="0x7fa5ae91c070" link="0x7fa5aec0e5b0" astParent="0x7fa5aec0e600" astOperand1="0x7fa5aec0e510"/>
+    <token id="0x7fa5aec0e5b0" file="main.c" linenr="68" column="31" str=")" scope="0x7fa5ae91c070" link="0x7fa5aec0e560"/>
+    <token id="0x7fa5aec0e600" file="main.c" linenr="68" column="33" str="&lt;" scope="0x7fa5ae91c070" type="op" isComparisonOp="True" astParent="0x7fa5aec0e4c0" astOperand1="0x7fa5aec0e560" astOperand2="0x7fa5aec0e650" valueType-type="bool"/>
+    <token id="0x7fa5aec0e650" file="main.c" linenr="68" column="35" str="12000000" scope="0x7fa5ae91c070" type="number" isInt="True" values="0x7fa5ae80e700" astParent="0x7fa5aec0e600" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0e6a0" file="main.c" linenr="68" column="43" str=")" scope="0x7fa5ae91c070" link="0x7fa5aec0e4c0"/>
+    <token id="0x7fa5aec0e770" file="main.c" linenr="68" column="44" str="{" scope="0x7fa5ae91c1c0" link="0x7fa5aec0e810"/>
+    <token id="0x7fa5aec0e7c0" file="main.c" linenr="69" column="13" str=";" scope="0x7fa5ae91c1c0"/>
+    <token id="0x7fa5aec0e810" file="main.c" linenr="70" column="9" str="}" scope="0x7fa5ae91c1c0" link="0x7fa5aec0e770"/>
+    <token id="0x7fa5aec0e860" file="main.c" linenr="72" column="9" str="setPin" scope="0x7fa5ae91c070" type="name" function="0x7fa5ae91bca0" astParent="0x7fa5aec0e8b0"/>
+    <token id="0x7fa5aec0e8b0" file="main.c" linenr="72" column="15" str="(" scope="0x7fa5ae91c070" link="0x7fa5aec0eb10" astOperand1="0x7fa5aec0e860" astOperand2="0x7fa5aec0ea70" valueType-type="void"/>
+    <token id="0x7fa5aec0e900" file="main.c" linenr="72" column="16" str="0b01000000" scope="0x7fa5ae91c070" type="number" isInt="True" values="0x7fa5ae814610" astParent="0x7fa5aec0e950" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0e950" file="main.c" linenr="72" column="26" str="," scope="0x7fa5ae91c070" astParent="0x7fa5aec0ea70" astOperand1="0x7fa5aec0e900" astOperand2="0x7fa5aec0e9a0"/>
+    <token id="0x7fa5aec0e9a0" file="main.c" linenr="72" column="27" str="0x0A" scope="0x7fa5ae91c070" type="number" isInt="True" values="0x7fa5ae8146c0" astParent="0x7fa5aec0e950" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0ea70" file="main.c" linenr="72" column="31" str="," scope="0x7fa5ae91c070" astParent="0x7fa5aec0e8b0" astOperand1="0x7fa5aec0e950" astOperand2="0x7fa5aec0eac0"/>
+    <token id="0x7fa5aec0eac0" file="main.c" linenr="72" column="32" str="0b10000000" scope="0x7fa5ae91c070" type="number" isInt="True" values="0x7fa5ae8146e0" astParent="0x7fa5aec0ea70" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fa5aec0eb10" file="main.c" linenr="72" column="42" str=")" scope="0x7fa5ae91c070" link="0x7fa5aec0e8b0"/>
+    <token id="0x7fa5aec0eb60" file="main.c" linenr="72" column="43" str=";" scope="0x7fa5ae91c070"/>
+    <token id="0x7fa5aec0ebb0" file="main.c" linenr="75" column="5" str="}" scope="0x7fa5ae91c070" link="0x7fa5aec0e050"/>
+    <token id="0x7fa5aec0ec00" file="main.c" linenr="76" column="1" str="}" scope="0x7fa5ae91bf40" link="0x7fa5aec0c480"/>
+    <token id="0x7fa5aec0ec50" file="main.c" linenr="78" column="1" str="void" scope="0x7fa5ae91b610" type="name"/>
+    <token id="0x7fa5aec0eca0" file="main.c" linenr="78" column="6" str="setPin" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91bca0" astParent="0x7fa5aec0ed70"/>
+    <token id="0x7fa5aec0ed70" file="main.c" linenr="78" column="12" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0f1b0" astOperand1="0x7fa5aec0eca0" astOperand2="0x7fa5aec0f070" valueType-type="void"/>
+    <token id="0x7fa5aec0edc0" file="main.c" linenr="78" column="22" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0ee60" file="main.c" linenr="78" column="27" str="address" scope="0x7fa5ae91b610" type="name" varId="7" variable="0x7fa5ac51fc60" astParent="0x7fa5aec0eeb0" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0eeb0" file="main.c" linenr="78" column="34" str="," scope="0x7fa5ae91b610" astParent="0x7fa5aec0f070" astOperand1="0x7fa5aec0ee60" astOperand2="0x7fa5aec0efa0"/>
+    <token id="0x7fa5aec0ef00" file="main.c" linenr="78" column="45" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0efa0" file="main.c" linenr="78" column="50" str="reg" scope="0x7fa5ae91b610" type="name" varId="8" variable="0x7fa5ac51fcd0" astParent="0x7fa5aec0eeb0" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0f070" file="main.c" linenr="78" column="53" str="," scope="0x7fa5ae91b610" astParent="0x7fa5aec0ed70" astOperand1="0x7fa5aec0eeb0" astOperand2="0x7fa5aec0f160"/>
+    <token id="0x7fa5aec0f0c0" file="main.c" linenr="78" column="64" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0f160" file="main.c" linenr="78" column="69" str="value" scope="0x7fa5ae91b610" type="name" varId="9" variable="0x7fa5ac51fd40" astParent="0x7fa5aec0f070" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0f1b0" file="main.c" linenr="78" column="74" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0ed70"/>
+    <token id="0x7fa5aec0f200" file="main.c" linenr="78" column="75" str="{" scope="0x7fa5ae91c310" link="0x7fa5aec0fb00"/>
+    <token id="0x7fa5aec0f250" file="main.c" linenr="79" column="6" str="i2c_master_start" scope="0x7fa5ae91c310" type="name" function="0x7fa5ae91b7e0" astParent="0x7fa5aec0f2a0"/>
+    <token id="0x7fa5aec0f2a0" file="main.c" linenr="79" column="22" str="(" scope="0x7fa5ae91c310" link="0x7fa5aec0f370" astOperand1="0x7fa5aec0f250" valueType-type="void"/>
+    <token id="0x7fa5aec0f370" file="main.c" linenr="79" column="23" str=")" scope="0x7fa5ae91c310" link="0x7fa5aec0f2a0"/>
+    <token id="0x7fa5aec0f3c0" file="main.c" linenr="79" column="24" str=";" scope="0x7fa5ae91c310"/>
+    <token id="0x7fa5aec0f410" file="main.c" linenr="80" column="6" str="i2c_master_send" scope="0x7fa5ae91c310" type="name" function="0x7fa5ae91b920" astParent="0x7fa5aec0f460"/>
+    <token id="0x7fa5aec0f460" file="main.c" linenr="80" column="21" str="(" scope="0x7fa5ae91c310" link="0x7fa5aec0f500" astOperand1="0x7fa5aec0f410" astOperand2="0x7fa5aec0f4b0" valueType-type="void"/>
+    <token id="0x7fa5aec0f4b0" file="main.c" linenr="80" column="22" str="address" scope="0x7fa5ae91c310" type="name" varId="7" variable="0x7fa5ac51fc60" values="0x7fa5ac707650" astParent="0x7fa5aec0f460" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0f500" file="main.c" linenr="80" column="29" str=")" scope="0x7fa5ae91c310" link="0x7fa5aec0f460"/>
+    <token id="0x7fa5aec0f550" file="main.c" linenr="80" column="30" str=";" scope="0x7fa5ae91c310"/>
+    <token id="0x7fa5aec0f5a0" file="main.c" linenr="81" column="6" str="i2c_master_send" scope="0x7fa5ae91c310" type="name" function="0x7fa5ae91b920" astParent="0x7fa5aec0f670"/>
+    <token id="0x7fa5aec0f670" file="main.c" linenr="81" column="21" str="(" scope="0x7fa5ae91c310" link="0x7fa5aec0f710" astOperand1="0x7fa5aec0f5a0" astOperand2="0x7fa5aec0f6c0" valueType-type="void"/>
+    <token id="0x7fa5aec0f6c0" file="main.c" linenr="81" column="22" str="reg" scope="0x7fa5ae91c310" type="name" varId="8" variable="0x7fa5ac51fcd0" values="0x7fa5ac7078e0" astParent="0x7fa5aec0f670" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0f710" file="main.c" linenr="81" column="25" str=")" scope="0x7fa5ae91c310" link="0x7fa5aec0f670"/>
+    <token id="0x7fa5aec0f760" file="main.c" linenr="81" column="26" str=";" scope="0x7fa5ae91c310"/>
+    <token id="0x7fa5aec0f7b0" file="main.c" linenr="82" column="6" str="i2c_master_send" scope="0x7fa5ae91c310" type="name" function="0x7fa5ae91b920" astParent="0x7fa5aec0f800"/>
+    <token id="0x7fa5aec0f800" file="main.c" linenr="82" column="21" str="(" scope="0x7fa5ae91c310" link="0x7fa5aec0f8a0" astOperand1="0x7fa5aec0f7b0" astOperand2="0x7fa5aec0f850" valueType-type="void"/>
+    <token id="0x7fa5aec0f850" file="main.c" linenr="82" column="22" str="value" scope="0x7fa5ae91c310" type="name" varId="9" variable="0x7fa5ac51fd40" values="0x7fa5ac522340" astParent="0x7fa5aec0f800" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0f8a0" file="main.c" linenr="82" column="27" str=")" scope="0x7fa5ae91c310" link="0x7fa5aec0f800"/>
+    <token id="0x7fa5aec0f970" file="main.c" linenr="82" column="28" str=";" scope="0x7fa5ae91c310"/>
+    <token id="0x7fa5aec0f9c0" file="main.c" linenr="83" column="6" str="i2c_master_stop" scope="0x7fa5ae91c310" type="name" function="0x7fa5ae91bbc0" astParent="0x7fa5aec0fa10"/>
+    <token id="0x7fa5aec0fa10" file="main.c" linenr="83" column="21" str="(" scope="0x7fa5ae91c310" link="0x7fa5aec0fa60" astOperand1="0x7fa5aec0f9c0" valueType-type="void"/>
+    <token id="0x7fa5aec0fa60" file="main.c" linenr="83" column="22" str=")" scope="0x7fa5ae91c310" link="0x7fa5aec0fa10"/>
+    <token id="0x7fa5aec0fab0" file="main.c" linenr="83" column="23" str=";" scope="0x7fa5ae91c310"/>
+    <token id="0x7fa5aec0fb00" file="main.c" linenr="84" column="1" str="}" scope="0x7fa5ae91c310" link="0x7fa5aec0f200"/>
+    <token id="0x7fa5aec0fb50" file="main.c" linenr="86" column="10" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0fc70" file="main.c" linenr="86" column="15" str="readPin" scope="0x7fa5ae91b610" type="name" function="0x7fa5ae91bd80" astParent="0x7fa5aec0fcc0"/>
+    <token id="0x7fa5aec0fcc0" file="main.c" linenr="86" column="22" str="(" scope="0x7fa5ae91b610" link="0x7fa5aec0ff70" astOperand1="0x7fa5aec0fc70" astOperand2="0x7fa5aec0fe00" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0fd10" file="main.c" linenr="86" column="32" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true"/>
+    <token id="0x7fa5aec0fdb0" file="main.c" linenr="86" column="37" str="address" scope="0x7fa5ae91b610" type="name" varId="10" variable="0x7fa5ac51fe10" astParent="0x7fa5aec0fe00" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fa5aec0fe00" file="main.c" linenr="86" column="44" str="," scope="0x7fa5ae91b610" astParent="0x7fa5aec0fcc0" astOperand1="0x7fa5aec0fdb0" astOperand2="0x7fa5aec0fe50"/>
+    <token id="0x7fa5aec0fe50" file="main.c" linenr="86" column="55" str="char" scope="0x7fa5ae91b610" type="name" isUnsigned="true" astParent="0x7fa5aec0fe00"/>
+    <token id="0x7fa5aec0ff70" file="main.c" linenr="86" column="68" str=")" scope="0x7fa5ae91b610" link="0x7fa5aec0fcc0"/>
+    <token id="0x7fa5aec10010" file="main.c" linenr="86" column="69" str="{" scope="0x7fa5ae91c460" link="0x7fa5aec10060"/>
+    <token id="0x7fa5aec10060" file="main.c" linenr="88" column="1" str="}" scope="0x7fa5ae91c460" link="0x7fa5aec10010"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x7fa5ae91b610" type="Global">
+      <functionList>
+        <function id="0x7fa5ae91b740" tokenDef="0x7fa5aec05170" name="i2c_master_setup" type="Function"/>
+        <function id="0x7fa5ae91b7e0" tokenDef="0x7fa5aec0a930" name="i2c_master_start" type="Function"/>
+        <function id="0x7fa5ae91b880" tokenDef="0x7fa5aec0ab90" name="i2c_master_restart" type="Function"/>
+        <function id="0x7fa5ae91b920" tokenDef="0x7fa5aec0ad70" name="i2c_master_send" type="Function">
+          <arg nr="1" variable="0x7fa5ac52cf40"/>
+        </function>
+        <function id="0x7fa5ae91ba00" tokenDef="0x7fa5aec0b140" name="i2c_master_recv" type="Function"/>
+        <function id="0x7fa5ae91bae0" tokenDef="0x7fa5aec0b320" name="i2c_master_ack" type="Function">
+          <arg nr="1" variable="0x7fa5ac5206a0"/>
+        </function>
+        <function id="0x7fa5ae91bbc0" tokenDef="0x7fa5aec0b5d0" name="i2c_master_stop" type="Function"/>
+        <function id="0x7fa5ae91bca0" tokenDef="0x7fa5aec0b830" name="setPin" type="Function">
+          <arg nr="1" variable="0x7fa5ac51fc60"/>
+          <arg nr="2" variable="0x7fa5ac51fcd0"/>
+          <arg nr="3" variable="0x7fa5ac51fd40"/>
+        </function>
+        <function id="0x7fa5ae91bd80" tokenDef="0x7fa5aec0be80" name="readPin" type="Function">
+          <arg nr="1" variable="0x7fa5ac51fe10"/>
+          <arg nr="2" variable="0x7fa5ac51fee0"/>
+        </function>
+        <function id="0x7fa5ae91be60" tokenDef="0x7fa5aec0c340" name="main" type="Function"/>
+      </functionList>
+    </scope>
+    <scope id="0x7fa5ae91bf40" type="Function" className="main" bodyStart="0x7fa5aec0c480" bodyEnd="0x7fa5aec0ec00" nestedIn="0x7fa5ae91b610" function="0x7fa5ae91be60"/>
+    <scope id="0x7fa5ae91c070" type="While" bodyStart="0x7fa5aec0e050" bodyEnd="0x7fa5aec0ebb0" nestedIn="0x7fa5ae91bf40"/>
+    <scope id="0x7fa5ae91c1c0" type="While" bodyStart="0x7fa5aec0e770" bodyEnd="0x7fa5aec0e810" nestedIn="0x7fa5ae91c070"/>
+    <scope id="0x7fa5ae91c310" type="Function" className="setPin" bodyStart="0x7fa5aec0f200" bodyEnd="0x7fa5aec0fb00" nestedIn="0x7fa5ae91b610" function="0x7fa5ae91bca0"/>
+    <scope id="0x7fa5ae91c460" type="Function" className="readPin" bodyStart="0x7fa5aec10010" bodyEnd="0x7fa5aec10060" nestedIn="0x7fa5ae91b610" function="0x7fa5ae91bd80"/>
+  </scopes>
+  <variables>
+    <var id="0x7fa5ac51fc60" nameToken="0x7fa5aec0ee60" typeStartToken="0x7fa5aec0edc0" typeEndToken="0x7fa5aec0edc0" access="Argument" scope="0x7fa5ae91c310" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fa5ac51fcd0" nameToken="0x7fa5aec0efa0" typeStartToken="0x7fa5aec0ef00" typeEndToken="0x7fa5aec0ef00" access="Argument" scope="0x7fa5ae91c310" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fa5ac51fd40" nameToken="0x7fa5aec0f160" typeStartToken="0x7fa5aec0f0c0" typeEndToken="0x7fa5aec0f0c0" access="Argument" scope="0x7fa5ae91c310" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fa5ac51fe10" nameToken="0x7fa5aec0fdb0" typeStartToken="0x7fa5aec0fd10" typeEndToken="0x7fa5aec0fd10" access="Argument" scope="0x7fa5ae91c460" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fa5ac51fee0" nameToken="0x0" typeStartToken="0x7fa5aec0fe50" typeEndToken="0x7fa5aec0fe50" access="Argument" scope="0x7fa5ae91c460" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fa5ac5206a0" nameToken="0x7fa5aec0b490" typeStartToken="0x7fa5aec0b440" typeEndToken="0x7fa5aec0b440" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fa5ac52cf40" nameToken="0x7fa5aec0af30" typeStartToken="0x7fa5aec0ae90" typeEndToken="0x7fa5aec0ae90" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+    <values id="0x7fa5ae91b4f0">
+      <value intvalue="2753627523" known="true"/>
+    </values>
+    <values id="0x7fa5ae91b510">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d510">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d5c0">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d670">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d720">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d7d0">
+      <value intvalue="64" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d880">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d930">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="0x7fa5ae91d9e0">
+      <value intvalue="64" known="true"/>
+    </values>
+    <values id="0x7fa5ae91da90">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="0x7fa5ae91db40">
+      <value intvalue="255" known="true"/>
+    </values>
+    <values id="0x7fa5ae91dbf0">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="0x7fa5ae91dca0">
+      <value intvalue="16" known="true"/>
+    </values>
+    <values id="0x7fa5ae80f330">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="0x7fa5ae80e700">
+      <value intvalue="12000000" known="true"/>
+    </values>
+    <values id="0x7fa5ae814610">
+      <value intvalue="64" known="true"/>
+    </values>
+    <values id="0x7fa5ae8146c0">
+      <value intvalue="10" known="true"/>
+    </values>
+    <values id="0x7fa5ae8146e0">
+      <value intvalue="128" known="true"/>
+    </values>
+    <values id="0x7fa5ac707650">
+      <value intvalue="64" possible="true"/>
+    </values>
+    <values id="0x7fa5ac7078e0">
+      <value intvalue="0" possible="true"/>
+      <value intvalue="1" possible="true"/>
+      <value intvalue="10" possible="true"/>
+    </values>
+    <values id="0x7fa5ac522340">
+      <value intvalue="0" possible="true"/>
+      <value intvalue="255" possible="true"/>
+      <value intvalue="128" possible="true"/>
+    </values>
+  </valueflow>
+</dump>
+</dumps>

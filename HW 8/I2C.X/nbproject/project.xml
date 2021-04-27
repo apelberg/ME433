@@ -4,7 +4,7 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>I2C</name>
-            <creation-uuid>17f45d64-069a-4564-8b23-7a32a072dd4a</creation-uuid>
+            <creation-uuid>047dce4d-a719-474c-91e6-4668ae129a5a</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
