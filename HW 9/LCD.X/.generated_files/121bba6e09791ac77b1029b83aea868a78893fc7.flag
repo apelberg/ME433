@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  /Users/adampelberg/Desktop/Northwestern/Sophomore (2020-2021)/Spring Quarter 2021/ME 433/ME433/HW 9/LCD.X/main.c
