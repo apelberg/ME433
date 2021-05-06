@@ -45,13 +45,28 @@ int main(void){
     INTCONbits.MVEC = 0x1;
     // disable JTAG to get pins back
     DDPCONbits.JTAGEN = 0;
-    
-   
-    
-    
     __builtin_enable_interrupts();
+    
+    initSPI();
+    LCD_init();
+    
+    // initialize heartbeat pin
+    TRISAbits.TRISA4 = 0;
+    LATAbits.LATA4 = 1;
+    
+    LCD_clearScreen(WHITE);
+    char m [50];
+    //sprintf(m, 'hello');
    
     while(1){
+        
+        drawChar(100, 100, 'A', MAGENTA);
+        drawString(20,20,m,BLUE);
+        
+        // heartbeat
+        LATAINV = 0b10000;
+        delay(0.1);
+      
        
    }
 }

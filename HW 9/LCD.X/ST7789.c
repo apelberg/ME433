@@ -107,6 +107,24 @@ void LCD_clearScreen(unsigned short color) {
 	}
 }
 
-// drawChar function
+void drawChar(unsigned short x, unsigned short y, char c, unsigned short color){
+    int i;
+    int j;
+    if (x >240-5 | y> 240-8){
+        ;
+    }
+    else{
+        for (i = 0; i<5; i++){
+            for (j = 0; j<8; j++){
+                if ((ASCII[c-0x20][i] >> j) & 0b1 == 0b1){
+                    LCD_drawPixel(x+i, y+j, color);
+                }
+            }
+        }
+    }
+    
+}
 
-// drawString function
+void drawString(unsigned short x, unsigned short y, char * m, unsigned short color){
+    ;
+}

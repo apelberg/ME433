@@ -10,13 +10,16 @@ void initSPI() {
     // Pin B14 has to be SCK1 -> SCL
     
     // set SDO1 - B13 -> SDA 
-    //
+    RPB13Rbits.RPB13R = 0b0011;
     
     // set B15 -> RES (reset), initialize to High
-    //
+    TRISBbits.TRISB15 = 0;
+    LATBbits.LATB15 = 1;
     
     // set B12 -> DC (data control), initialize Low
-    //
+    TRISBbits.TRISB12 = 0;
+    LATBbits.LATB12 = 0;
+    
 
     // setup SPI1
     SPI1CON = 0; // turn off the spi module and reset it
