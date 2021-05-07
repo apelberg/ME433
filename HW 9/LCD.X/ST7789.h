@@ -81,7 +81,8 @@ void LCD_init(void); // send the initializations to the LCD
 void LCD_drawPixel(unsigned short, unsigned short, unsigned short); // set the x,y pixel to a color
 void LCD_setAddr(unsigned short, unsigned short, unsigned short, unsigned short); // set the memory address you are writing to
 void LCD_clearScreen(unsigned short); // set the color of every pixel
-void drawChar(unsigned short x, unsigned short y, char c, unsigned short color); // draw a character on the screen
-void drawString(unsigned short x, unsigned short y, char * m, unsigned short color); // draw an entire string on the screen
+void drawChar(unsigned short x, unsigned short y, char c, unsigned short color, unsigned short bcolor); // draw a character on the screen
+void drawString(unsigned short x, unsigned short y, char * m, unsigned short color, unsigned short bcolor); // draw an entire string on the screen
+void drawProgressBar(unsigned short x, unsigned short y, int length, int value, unsigned short forecolor, unsigned short backcolor);// draw progress bar
 
 #endif

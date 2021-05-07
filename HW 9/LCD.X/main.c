@@ -2,6 +2,7 @@
 #include<sys/attribs.h>  // __ISR macro
 #include "ST7789.h"
 #include"font.h"
+#include<stdio.h>
 // DEVCFG0
 #pragma config DEBUG = OFF // disable debugging
 #pragma config JTAGEN = OFF // disable jtag
@@ -56,21 +57,30 @@ int main(void){
     
     LCD_clearScreen(WHITE);
     char m [50];
-    //sprintf(m, 'hello');
-   
+    int num;
+    
     while(1){
-        
-        drawChar(100, 100, 'A', MAGENTA);
-        drawString(20,20,m,BLUE);
-        
-        // heartbeat
-        LATAINV = 0b10000;
-        delay(0.1);
-      
-       
+        num = 0;
+        int i;
+        for (i = 0; i<101; i++){
+            sprintf(m, "Hello World %d!  ", num);
+            _CP0_SET_COUNT(0);
+            drawString(28,32,m,BLUE, WHITE);
+            int ticks = _CP0_GET_COUNT();
+            
+            drawProgressBar(28, 44, 101, i, BLUE, RED);
+            
+            float frequency = 1/(ticks /24000000.0);
+            sprintf(m, "FPS: %.3f", frequency);
+            drawString(28,60,m,BLUE, WHITE);
+            
+            // heartbeat
+            LATAINV = 0b10000;
+            delay(0.01);
+            num++;
+        }
    }
 }
-
 
 void delay(float time){
     float clocks = time/(1.0/24000000.0);

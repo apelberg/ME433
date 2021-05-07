@@ -107,11 +107,11 @@ void LCD_clearScreen(unsigned short color) {
 	}
 }
 
-void drawChar(unsigned short x, unsigned short y, char c, unsigned short color){
+void drawChar(unsigned short x, unsigned short y, char c, unsigned short color, unsigned short bcolor){
     int i;
     int j;
     if (x >240-5 | y> 240-8){
-        ;
+        drawString(0,0,"ERROR",BLACK, WHITE);
     }
     else{
         for (i = 0; i<5; i++){
@@ -119,12 +119,35 @@ void drawChar(unsigned short x, unsigned short y, char c, unsigned short color){
                 if ((ASCII[c-0x20][i] >> j) & 0b1 == 0b1){
                     LCD_drawPixel(x+i, y+j, color);
                 }
+                else{
+                    LCD_drawPixel(x+i, y+j, bcolor);
+                }
             }
         }
     }
     
 }
 
-void drawString(unsigned short x, unsigned short y, char * m, unsigned short color){
-    ;
+void drawString(unsigned short x, unsigned short y, char * m, unsigned short color, unsigned short bcolor){
+    int i = 0;
+    while(m[i]){ 
+        drawChar(x, y, m[i], color, bcolor); 
+        i++;
+        x = x+ 6;
+    }
+}
+
+void drawProgressBar(unsigned short x, unsigned short y, int length, int value, unsigned short forecolor, unsigned short backcolor){
+    int i;
+    int j;
+    for (i = 0; i<length; i++){
+        for (j = 0; j<8; j++){
+            if (i<value){
+                LCD_drawPixel(x+i, y+j, forecolor);
+            }
+            else{
+                LCD_drawPixel(x+i, y+j, backcolor);
+            }
+        }
+    }
 }
