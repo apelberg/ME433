@@ -77,7 +77,7 @@ int main(void){
         // read in WHO_AM_I
         if (readPin(0b11010100, 0x0F, 0b11010101) == 0b01101001){    
             LATAINV = 0b10000;
-            delay(0.1); 
+            delay(0.01); 
         }
         else{
             LATAINV = 0b10000;
@@ -103,12 +103,25 @@ int main(void){
         sprintf(m, "Temp: %d       ", filteredData[0]);
         drawString(10,10,m,BLUE, WHITE);
         
-        sprintf(m, "g: %d %d  %d       ", filteredData[1],filteredData[2],filteredData[3]);
+        sprintf(m, "g: %d %d  %d   ", filteredData[1],filteredData[2],filteredData[3]);
         drawString(10,20,m,BLUE, WHITE);
         
-        sprintf(m, "a: %d %d %d        ", filteredData[4],filteredData[5],filteredData[6]);
+        sprintf(m, "a: %d %d %d  ", filteredData[4],filteredData[5],filteredData[6]);
         drawString(10,30,m,BLUE, WHITE);
        
+       
+        if (filteredData[4] >= 0){
+            drawProgressBarNegY(120, 120, 80, (int)((filteredData[4]/32767.)*200), BLUE, WHITE);
+        }
+        else{
+            drawProgressBarPosY(120, 120, 80, (int)((filteredData[4]/-32767.)*200), BLUE, WHITE);
+        }
+        if (filteredData[5] >= 0){
+            drawProgressBarPosX(120, 120, 80, (int)((filteredData[5]/32767.)*200), RED, WHITE);
+        }
+        else{
+            drawProgressBarNegX(120, 120, 80, (int)((filteredData[5]/-32767.)*200), RED, WHITE);
+        }
         
     }
 }
